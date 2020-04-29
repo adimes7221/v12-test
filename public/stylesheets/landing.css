@@ -1,0 +1,77 @@
+body {
+	background-color: blue;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/7f/BenHillGriffinStadium.png) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://footballstadiumdigest.com/wp-content/uploads/2018/02/The-Swamp.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Ben_Hill_Griffin_Stadium.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://www.heraldtribune.com/storyimage/LK/20191012/NEWS/191019918/EP/1/1/EP-191019918.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://sportshub.cbsistatic.com/i/r/2016/06/09/e35cc6e1-7585-4df0-af47-1470a2d2dece/thumbnail/1200x675/680de66aeee2196051a297d3950b21d3/the-swamp-ben-hill-griffin-stadium.jpg);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
