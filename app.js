@@ -17,7 +17,7 @@ var commentRoutes	= require("./routes/comments"),
 	playersRoutes 	= require("./routes/players"),
 	authRoutes		= require("./routes/auth");
 
-mongoose.connect("mongodb://localhost:27017/gator_greats", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect("mongodb://heroku_71bfzt5p:m91d8bt1sc5r5cjs0o910oatq0@ds211268.mlab.com:11268/heroku_71bfzt5p", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
